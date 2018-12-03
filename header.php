@@ -21,7 +21,9 @@
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       google.charts.setOnLoadCallback(drawChart2);
-
+      google.charts.setOnLoadCallback(drawChart3);
+      google.charts.setOnLoadCallback(drawChart4);
+      
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Year', 'Sales'],
@@ -58,6 +60,46 @@
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div2'));
         chart.draw(data, options);
         document.getElementById('aff').innerHTML = '$'+ data.wg[2].c[2].v;
+      }      
+
+      function drawChart3() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales'],
+          ['2016',  10],
+          ['2017',  8],
+          ['2018',  0]
+        ]);
+
+        var options = {
+          title: 'Refunds',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
+        chart.draw(data, options);
+        document.getElementById('ref').innerHTML = '$'+ data.wg[2].c[1].v;
+        console.log(data.wg[2].c[1]);
+      }
+
+      function drawChart4() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales'],
+          ['2016',  300],
+          ['2017',  712],
+          ['2018',  1250]
+        ]);
+
+        var options = {
+          title: 'Average Revenue per user',
+          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div4'));
+        chart.draw(data, options);
+        document.getElementById('avg').innerHTML = '$'+ data.jc[2][1].gf;
+        console.log(data.jc[2][1].gf);
       }
     </script>
 

@@ -88,26 +88,141 @@
       </div>
 
       <div class="tab-content">
-      <section class="tab-pane active" id="dashboard" role="tabpanel" aria-labelledby="dash-tab">
-        <div class="container">
-          <?php include 'includes/dashboard.inc.php' ?>
-        </div>
-      </section>
-      <section class="tab-pane" id="elements" role="tabpanel" aria-labelledby="elements-tab">
-        <div class="container">
-          <?php include 'includes/elements.inc.php' ?>
-        </div>
-      </section>
-      <section class="tab-pane" id="charts" role="tabpanel" aria-labelledby="charts-tab">
-        Charts Page Lots of Charts
-      </section>
-      <section class="tab-pane" id="forms" role="tabpanel" aria-labelledby="forms-tab">
-        A whole bunch of forms
-      </section>
-</div>
+        <section class="tab-pane active animated fadeIn" id="dashboard" role="tabpanel" aria-labelledby="dash-tab">
+          <div class="container">
+            <?php include 'includes/dashboard.inc.php' ?>
+          </div>
+        </section>
+        <section class="tab-pane" id="elements" role="tabpanel" aria-labelledby="elements-tab">
+          <div class="container">
+            <?php include 'includes/elements.inc.php' ?>
+          </div>
+        </section>
+        <section class="tab-pane" id="charts" role="tabpanel" aria-labelledby="charts-tab">
+          Charts Page Lots of Charts
+        </section>
+        <section class="tab-pane" id="forms" role="tabpanel" aria-labelledby="forms-tab">
+          A whole bunch of forms
+        </section>
+      </div>
     </main>
   </div> <!-- end content -->
 </div> <!-- end wrapper -->
 
+
+
+
+<!-- MODALS -->
+<div class="modal fade" id="productOneModal" tabindex="-1" role="dialog" aria-labelledby="productOneLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productOneLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col col-sm-4">
+            <img src="https://via.placeholder.com/150" alt="">
+            </div>
+            <div class="col col-sm-8">
+              <h3>Some Title</h3>
+              <p>ID0001</p>
+              <ul class="list-group">
+                <li class="list-group-item">Item 1</li>
+                <li class="list-group-item">Item 2</li>
+                <li class="list-group-item">Item 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-sm-12">
+              <div id="chart_div6" style="width: 100%; height: auto; margin: auto;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="productTwoModal" tabindex="-1" role="dialog" aria-labelledby="productTwoLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productOneLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col col-sm-4">
+            <img src="https://via.placeholder.com/150" alt="">
+            </div>
+            <div class="col col-sm-8">
+              <h3>Some Title</h3>
+              <p>ID0001</p>
+              <ul class="list-group">
+                <li class="list-group-item">Item 1</li>
+                <li class="list-group-item">Item 2</li>
+                <li class="list-group-item">Item 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-sm-12">
+              <div id="chart_div7" style="width: 100%; height: auto; margin: auto;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="productThreeModal" tabindex="-1" role="dialog" aria-labelledby="productThreeLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productOneLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col col-sm-4">
+              <img src="https://via.placeholder.com/150" alt="">
+              </div>
+              <div class="col col-sm-8">
+                <h3>Some Title</h3>
+                <p>ID0001</p>
+                <ul class="list-group">
+                  <li class="list-group-item">Item 1</li>
+                  <li class="list-group-item">Item 2</li>
+                  <li class="list-group-item">Item 3</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-sm-12">
+                <div id="chart_div8" style="width: 100%; height: auto; margin: auto;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
 <?php include 'footer.php' ?>
 

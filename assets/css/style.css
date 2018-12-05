@@ -40,9 +40,13 @@ input[type="color"]:focus {
   outline: 0 none;
 }
 
-
-
 /* END GLOBAL */
+
+/* LOGIN STYLES */
+
+
+
+/* END LOGIN STYLES */
 
 #dash-tab {
   transition: 0.3s ease-in-out;

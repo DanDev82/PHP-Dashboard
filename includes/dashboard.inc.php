@@ -4,7 +4,7 @@
     <div class="col col-md-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Total Revenue</h5>
+          <h5 class="card-title">Recent Activity</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="rev">Card subtitle</h6>
           <div id="chart_div"></div>
         </div>
@@ -14,7 +14,7 @@
     <div class="col col-md-3">
       <div class="card"">
         <div class="card-body">
-          <h5 class="card-title">Affiliate Revenue</h5>
+          <h5 class="card-title">Invoice Warnings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="aff">Card subtitle</h6>
           <div id="chart_div2"></div>
         </div>
@@ -24,7 +24,7 @@
     <div class="col col-md-3">
       <div class="card"">
         <div class="card-body">
-          <h5 class="card-title">Refunds</h5>
+          <h5 class="card-title">Late Bills</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="ref">Card subtitle</h6>
           <div id="chart_div3"></div>
         </div>

@@ -192,7 +192,7 @@
           ["Camp 1", 8.94, "#7386D5"],
           ["Camp 2", 10.49, "#DC3912"],
           ["Camp 3", 19.30, "#FFEA00"],
-          ["Camp 4", 21.45, "#00e676"]
+          ["Camp 4", 21.45, "#00C853"]
         ]);
   
         var view = new google.visualization.DataView(data);

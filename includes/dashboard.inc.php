@@ -34,9 +34,52 @@
     <div class="col col-md-3">
       <div class="card"">
         <div class="card-body">
-          <h5 class="card-title">Avg Rev per User</h5>
+          <h5 class="card-title">Total Savings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="avg">Card subtitle</h6>
           <div id="chart_div4"></div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End Row -->
+  <div class="row">
+
+    <div class="col col-md-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Recent Activity</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="rev">Card subtitle</h6>
+          <div id="chart_div10"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col col-md-3">
+      <div class="card"">
+        <div class="card-body">
+          <h5 class="card-title">Invoice Warnings</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="aff">Card subtitle</h6>
+          <div id="chart_div11"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col col-md-3">
+      <div class="card"">
+        <div class="card-body">
+          <h5 class="card-title">Late Bills</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="ref">Card subtitle</h6>
+          <div id="chart_div12"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col col-md-3">
+      <div class="card"">
+        <div class="card-body">
+          <h5 class="card-title">Total Savings</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="avg">Card subtitle</h6>
+          <div id="chart_div13"></div>
         </div>
       </div>
     </div>
@@ -47,7 +90,7 @@
     <div class="col col-md-9">
       <div class="card"">
         <div class="card-body">
-          <h5 class="card-title">Recent Orders</h5>
+          <h5 class="card-title">Total Invoiced</h5>
           <h6 class="card-subtitle mb-2 text-muted">Order Details</h6>
           <table class="table table-responsive" id="productsTable">
             <thead>

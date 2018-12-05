@@ -10,6 +10,11 @@
       google.charts.setOnLoadCallback(drawChart7);
       google.charts.setOnLoadCallback(drawChart8);
       google.charts.setOnLoadCallback(drawChart9);
+      google.charts.setOnLoadCallback(drawChart10);
+      google.charts.setOnLoadCallback(drawChart11);
+      google.charts.setOnLoadCallback(drawChart12);
+      google.charts.setOnLoadCallback(drawChart13);
+      google.charts.setOnLoadCallback(drawChart14);
       google.charts.setOnLoadCallback(drawTable);
       
       function drawChart() {
@@ -213,3 +218,43 @@
         var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chart.draw(view, options);
       }
+
+      function drawChart10() {
+        var data = google.visualization.arrayToDataTable([
+          ['Desc', 'Rating'],
+          ['Quality',     10],
+          ['Smell',      2],
+          ['Side Effects',  1],
+          ['Popularity', 8],
+          ['Price',    3]
+        ]);
+
+        var options = {
+          title: 'Product Details',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div10'));
+        chart.draw(data, options);
+        console.log(chart);
+      }      
+
+      function drawChart11() {
+        var data = google.visualization.arrayToDataTable([
+          ['Desc', 'Rating'],
+          ['Quality',     10],
+          ['Smell',      2],
+          ['Side Effects',  1],
+          ['Popularity', 8],
+          ['Price',    3]
+        ]);
+
+        var options = {
+          title: 'Product Details',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div11'));
+        chart.draw(data, options);
+        console.log(chart);
+      }       

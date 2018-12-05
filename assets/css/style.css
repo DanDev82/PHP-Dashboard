@@ -4,6 +4,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #fafafa;
+  width: 100%;
 }
 
 p {
@@ -20,6 +21,7 @@ a, a:hover, a:focus {
   transition: all 0.3s;
 }
 
+input:-webkit-autofill,
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -38,15 +40,17 @@ input[type="color"]:focus {
   border-color: rgba(23,162,184, 0.3);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(23,162,184, 0.6);
   outline: 0 none;
+  background-color: #E6E6E6 !important;
+  -webkit-box-shadow: 0 0 0 100px #E6E6E6 inset;
+  -webkit-transition-property: background-color !important;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* END GLOBAL */
-
-/* LOGIN STYLES */
-
-
-
-/* END LOGIN STYLES */
 
 #dash-tab {
   transition: 0.3s ease-in-out;
@@ -140,11 +144,13 @@ th {
   text-align: center;
 }
 
+/* <ul> style */
 .list-group {
   width: 80%;
   margin: auto;
 }
 
+/* <li> style */
 .list-group-item {
   font-size: 12px;
 }
@@ -207,6 +213,7 @@ th {
   transform: translateX(50%);
 }
 
+/* <a> with attribute of data-toglle="collapse" */
 a[data-toggle="collapse"] {
   position: relative;
 }
@@ -255,7 +262,7 @@ a[data-toggle="collapse"] {
       padding: 20px 10px;
       font-size: 0.85em;
   }
-
+  /* icon styles for sidebar when active */
   #sidebar.active ul li a i {
       margin-right:  0;
       display: block;
@@ -270,6 +277,7 @@ a[data-toggle="collapse"] {
 
 }
 
+/* Reusable color class */
 .teal {
   border: 1px solid #17A2B8;
   color: #17A2B8;
@@ -281,16 +289,91 @@ a[data-toggle="collapse"] {
   color: #fff;
 }
 
-
+/* Found in home.php <main> element */
 .page-title {
   font-size: 120%;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
+/* Found mainly on dashboard.php */
 .card {
   box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.2);
+}
+
+
+/**************************************************
+                  LOGIN STYLES
+**************************************************/                  
+/* Whole page wrapper for both form pages (login/register) */
+.login-wrapper,
+.register-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: #7386D5;
+}
+
+/* Form Styling */
+.form {
+  background: #fff;
+  padding: 40px 40px 80px;
+  border-top: 3px solid #17A2B8;
+  max-width: 600px;
+  min-width: 350px;
+  border-radius: .25rem;
+  box-shadow: 2px 2px 20px rgba(84, 84, 84, 0.8);
+  position: relative;
+}
+
+/* Move form heading up slightly and give space under heading */
+.form h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Found in index.php form and home.php form */
+form input.form-control {
+  border-radius: 25px;
+  border: none;
+  background: #E6E6E6 !important;
+}
+
+/* Form Submit and Register button style */
+.form-action-button {
+  background: #17A2B8;
+  color: #fff;
+  padding: 8px 67px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.2);
+}
+
+/* Place link at bottom of form and horizontal align link with icon */
+.login-wrapper form a#register-link {
+  position: absolute;
+  bottom: 20px;
+  left: 85px; 
+
+  display: flex;
+  align-items: center;
+}
+
+/*************************************
+      Clean up form input styles
+*************************************/
+/* Remove background color and right border from icon in input group */
+.input-group-text {
+  background: #E6E6E6 !important;
+  border: none;
+  border-radius: 25px;
+  color: #999 ;
+  padding-left: 20px;
+}
+
+/* Removes border for specific inputs */
+.input-border.form-control {
+  border-left: none;
 }

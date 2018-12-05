@@ -41,7 +41,15 @@
             <div class="input-group-prepend">
               <span class="input-group-text input-icon"><i class="fas fa-lock"></i></span>
             </div>
-            <input type="password" name="user_pass" class="form-control input-border" placeholder="Password" aria-label="Username" aria-describedby="pass-icon" autocomplete="new-password">
+            <input type="password" name="password" class="form-control input-border" placeholder="Password" aria-label="Username" aria-describedby="pass-icon" autocomplete="new-password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text input-icon"><i class="fas fa-lock"></i></span>
+            </div>
+            <input type="password" name="confirm_pass" class="form-control input-border" placeholder="Confirm Password" aria-label="Username" aria-describedby="pass-icon" autocomplete="new-password">
           </div>
         </div>
         <input type="submit" class="btn btn-block form-action-button" value="Register">

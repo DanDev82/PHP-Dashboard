@@ -1,7 +1,9 @@
 <?php include 'header.php' ?>
 
 <div class="wrapper">
-  <!-- Sidebar  -->
+  <!--****************************** 
+              Sidebar  
+  *******************************-->
   <nav id="sidebar" class="shadow">
     <div class="sidebar-header">
       <h3>At A Glance</h3>
@@ -16,27 +18,44 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="elements-tab" data-toggle="tab" href="#elements" role="tab" aria-controls="elements" aria-selected="false">
-          UI Elements
+        <a class="nav-link" id="clients-tab" data-toggle="tab" href="#clients" role="tab" aria-controls="clients" aria-selected="false" onclick="loader()">
+          Clients
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#charts" id="chartBtn">
-          Charts
+        <a href="#props" id="props-tab" data-toggle="tab" href="#props" role="tab" aria-controls="props" aria-selected="false" onclick="loader()">
+          Proposals
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#forms" id="formBtn">
-          Forms
+        <a href="#mbp" id="mbp-tab" data-toggle="tab" href="#mbp" role="tab" aria-controls="mbp" aria-selected="false" title="Managed Billing Program">
+          MBP
           <i class="fas fa-caret-right float-right"></i>
         </a>
-      </li>            
+      </li>    
+      <li class="nav-item">
+        <a href="#settings" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+          Settings
+          <i class="fas fa-caret-right float-right"></i>
+        </a>
+        <ul class="nav" id="sidebar-settings-content">
+          <li class="nav-item"><a href="#">Users</a></li>
+          <li class="nav-item"><a href="#">Roles</a></li>
+          <li class="nav-item"><a href="#">Themes</a></li>
+        </ul>
+      </li>         
     </ul>
-  </nav>
 
-  <!-- Page Content  -->
+  </nav>
+  <!--****************************** 
+              End Sidebar  
+  *******************************-->
+ 
+  <!--****************************** 
+              Page Content  
+  *******************************-->
   <div id="content">
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow  bg-white">
       <div class="container-fluid">
@@ -52,19 +71,31 @@
           <ul class="navbar-nav mr-2 ml-auto">
             <li class="nav-item">
               
-              <form class="form-inline my-2 my-lg-0">
+              <form class="form-inline my-2 my-lg-0 search-form">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark my-2 my-sm-0 teal" type="submit">Search</button>
+                <button class="btn btn-outline-dark my-2 my-sm-0 teal search-button" type="submit">Search</button>
               </form>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><i class="far fa-bell"></i><span class="sr-only">(current)</span></a>
+
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fas fa-th"></i></a>
+              <a class="nav-link menu-icon" href="#">
+              <span class="fa-layers fa-fw">
+                <i class="far fa-bell"></i>
+                <span class="fa-layers-counter fa-layers-top-right">2</span>
+              </span>
+              <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item menu-icon">
-              <a class="nav-link disabled" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle menu-icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span id="welcome">Welcome <?php echo $_SESSION['firstName'];?>&nbsp;</span><i class="far fa-user"></i></a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Profile</a>
+              <a class="dropdown-item" href="#">Something</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-icon" href="#"><i class="fas fa-ellipsis-h"></i></a>
             </li>
           </ul>
         </div>
@@ -93,26 +124,33 @@
             <?php include 'includes/dashboard.inc.php' ?>
           </div>
         </section>
-        <section class="tab-pane" id="elements" role="tabpanel" aria-labelledby="elements-tab">
+        <section class="tab-pane" id="clients" role="tabpanel" aria-labelledby="clients-tab">
           <div class="container">
-            <?php include 'includes/elements.inc.php' ?>
+            <?php include 'includes/clients.inc.php' ?>
           </div>
         </section>
-        <section class="tab-pane" id="charts" role="tabpanel" aria-labelledby="charts-tab">
-          Charts Page Lots of Charts
+        <section class="tab-pane" id="props" role="tabpanel" aria-labelledby="props-tab">
+        <?php include 'includes/proposals.inc.php' ?>
         </section>
-        <section class="tab-pane" id="forms" role="tabpanel" aria-labelledby="forms-tab">
-          A whole bunch of forms
+        <section class="tab-pane" id="mbp" role="tabpanel" aria-labelledby="mbp-tab">
+        <?php include 'includes/managedbillingprogram.inc.php' ?>
+        </section>
+        <section class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+        <?php include 'includes/settings.inc.php' ?>
         </section>
       </div>
     </main>
-  </div> <!-- end content -->
+  </div> 
+  <!--****************************** 
+          End Page Content  
+  *******************************-->
 </div> <!-- end wrapper -->
 
 
 
-
-<!-- MODALS -->
+<!--****************************** 
+            MODALS
+*******************************-->
 <div class="modal fade" id="productOneModal" tabindex="-1" role="dialog" aria-labelledby="productOneLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

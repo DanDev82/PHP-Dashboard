@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');
 
@@ -27,4 +28,7 @@ $(document).ready(function(){
   $('#productOneLabel').html(title1);
   $('#productTwoLabel').html(title2);
   $('#productThreeLabel').html(title3);
+
+
+
 });

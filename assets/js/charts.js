@@ -1,7 +1,7 @@
 
       google.charts.load('current', {'packages':['corechart']});
       google.charts.load('current', {'packages':['table']});
-      google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawTable1);
       google.charts.setOnLoadCallback(drawChart2);
       google.charts.setOnLoadCallback(drawChart3);
       google.charts.setOnLoadCallback(drawChart4);
@@ -14,27 +14,25 @@
       google.charts.setOnLoadCallback(drawChart11);
       google.charts.setOnLoadCallback(drawChart12);
       google.charts.setOnLoadCallback(drawChart13);
-      google.charts.setOnLoadCallback(drawChart14);
       google.charts.setOnLoadCallback(drawTable);
       
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'Sales'],
-          ['2016',  606],
-          ['2017',  10000],
-          ['2018',  12099]
+      function drawTable1() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'User');
+        data.addColumn('number', 'Action');
+        data.addColumn('number', 'Date/Time');
+        data.addColumn('boolean', 'Complete');
+        data.addRows([
+          ['Admin',  {v: 10000, f: 'Added User'}, {v: 1, f: '12/5/2018 09:34:23'}, true],
+          ['Dan',  {v: 10000, f: 'Updated Profile'}, {v: 1, f: '12/6/2018 14:55:00'}, true],
+          ['Thomas',  {v: 10000, f: 'Removed User'}, {v: 1, f: '12/4/2018 11:15:38'}, true],
+          ['Admin',  {v: 10000, f: 'Sent Refund'}, {v: 1, f: '12/6/2018 12:26:15'}, false]
         ]);
 
-        var options = {
-          title: 'Total Revenue',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-        };
+        var table = new google.visualization.Table(document.getElementById('table_div1'));
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-        document.getElementById('rev').innerHTML = '$'+ data.jc[2][1].gf;
-      }      
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }     
 
       function drawChart2() {
         var data = google.visualization.arrayToDataTable([
@@ -72,7 +70,6 @@
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
         chart.draw(data, options);
         document.getElementById('ref').innerHTML = '$'+ data.wg[2].c[1].v;
-        console.log('Chart 3' + data.wg[2].c[1]);
       }
 
       function drawChart4() {
@@ -92,7 +89,6 @@
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div4'));
         chart.draw(data, options);
         document.getElementById('avg').innerHTML = '$'+ data.jc[2][1].gf;
-        console.log('Chart 4 ' + data.jc[2][1].gf);
       }
 
       function drawChart5() {
@@ -131,7 +127,6 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div6'));
         chart.draw(data, options);
-        console.log(chart);
       }
 
       function drawChart7() {
@@ -151,7 +146,6 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div7'));
         chart.draw(data, options);
-        console.log(chart);
       }
 
       function drawChart8() {
@@ -171,7 +165,6 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div8'));
         chart.draw(data, options);
-        console.log(chart);
       }
 
       function drawTable() {
@@ -236,10 +229,28 @@
 
         var chart = new google.visualization.PieChart(document.getElementById('chart_div10'));
         chart.draw(data, options);
-        console.log(chart);
       }      
 
       function drawChart11() {
+        var data = google.visualization.arrayToDataTable([
+          ['Desc', 'Rating'],
+          ['Quality',     10],
+          ['Smell',      2],
+          ['Side Effects',  1],
+          ['Popularity', 8],
+          ['Price',    3]
+        ]);
+
+        var options = {
+          title: 'Invoice Warnings',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div11'));
+        chart.draw(data, options);
+      }     
+      
+      function drawChart12() {
         var data = google.visualization.arrayToDataTable([
           ['Desc', 'Rating'],
           ['Quality',     10],
@@ -254,7 +265,25 @@
           pieHole: 0.4,
         };
 
-        var chart = new google.visualization.PieChart(document.getElementById('chart_div11'));
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div12'));
         chart.draw(data, options);
-        console.log(chart);
+      } 
+            
+      function drawChart13() {
+        var data = google.visualization.arrayToDataTable([
+          ['Desc', 'Rating'],
+          ['Quality',     10],
+          ['Smell',      2],
+          ['Side Effects',  1],
+          ['Popularity', 8],
+          ['Price',    3]
+        ]);
+
+        var options = {
+          title: 'Product Details',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div13'));
+        chart.draw(data, options);
       }       

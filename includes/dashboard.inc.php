@@ -1,17 +1,17 @@
 <div class="container" class="no-gap-columns">
   <div class="row">
 
-    <div class="col col-md-3">
+    <div class="col col-md-8">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Recent Activity</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="rev">Card subtitle</h6>
-          <div id="chart_div"></div>
+          <div id="table_div1"></div>
         </div>
       </div>
     </div>
     
-    <div class="col col-md-3">
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Invoice Warnings</h5>
@@ -20,8 +20,11 @@
         </div>
       </div>
     </div>
+
+  </div> <!-- End Row -->
+  <div class="row mt-2">
     
-    <div class="col col-md-3">
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Late Bills</h5>
@@ -31,7 +34,7 @@
       </div>
     </div>
 
-    <div class="col col-md-3">
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Total Savings</h5>
@@ -41,10 +44,7 @@
       </div>
     </div>
 
-  </div> <!-- End Row -->
-  <div class="row">
-
-    <div class="col col-md-3">
+        <div class="col col-md-4">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Recent Activity</h5>
@@ -53,8 +53,11 @@
         </div>
       </div>
     </div>
+
+  </div> <!-- End row -->
+  <div class="row mt-2">
     
-    <div class="col col-md-3">
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Invoice Warnings</h5>
@@ -63,8 +66,8 @@
         </div>
       </div>
     </div>
-    
-    <div class="col col-md-3">
+
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Late Bills</h5>
@@ -74,7 +77,7 @@
       </div>
     </div>
 
-    <div class="col col-md-3">
+    <div class="col col-md-4">
       <div class="card"">
         <div class="card-body">
           <h5 class="card-title">Total Savings</h5>
@@ -146,7 +149,7 @@
       </div>
     </div>
     <div class="col col-md-3">
-      <div class="card" style="height: 387px;">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Customer Acquisitions</h5>
           

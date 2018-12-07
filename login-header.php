@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php include 'includes/db_connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

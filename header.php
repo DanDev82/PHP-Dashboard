@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+<?php include 'includes/db_connect.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +18,9 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animate.css">
 
-
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="assets/js/charts.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="assets/js/charts.js"></script>
+  <script src="loader.js"></script>
 
   <title>At A Glance</title>
 </head>

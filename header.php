@@ -1,5 +1,10 @@
 <?php session_start(); ?>
 <?php include 'includes/db_connect.php'; ?>
+<?php 
+  if(!isset($_SESSION['loggedIn'])) {
+    header("Location: index.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +21,12 @@
   
   <!-- My Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/media-queries.css">
   <link rel="stylesheet" href="assets/css/animate.css">
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="assets/js/charts.js"></script>
-  <script src="loader.js"></script>
 
   <title>At A Glance</title>
 </head>

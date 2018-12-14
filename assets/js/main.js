@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 
   $('#sidebarCollapse').on('click', function () {
+
     $('#sidebar').toggleClass('active');
 
     if($('#sidebar').hasClass('active')) {
@@ -10,6 +11,7 @@ $(document).ready(function(){
     if(!$('#sidebar').hasClass('active')) {
       $('#dash-tab').html('Dashboard <i class="fas fa-caret-right float-right"></i>');
     }
+
   });
 
 
@@ -31,4 +33,18 @@ $(document).ready(function(){
 
 
 
+
+  // Footer Stuff
+  // Copywrite
+  var d = new Date();
+  var n = d.getFullYear();
+  console.log(n);
+  if(n == '2018') {
+    $('#copyright').html(`&copy; 2018`);
+  } else {
+    $('#copyright').html(`&copy; 2018 - ${n}`);
+  }
+  
+  
 });
+

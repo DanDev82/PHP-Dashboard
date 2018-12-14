@@ -12,7 +12,7 @@
     </div>
     
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Invoice Warnings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="aff">Card subtitle</h6>
@@ -25,7 +25,7 @@
   <div class="row mt-2">
     
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Late Bills</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="ref">Card subtitle</h6>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Savings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="avg">Card subtitle</h6>
@@ -58,7 +58,7 @@
   <div class="row mt-2">
     
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Invoice Warnings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="aff">Card subtitle</h6>
@@ -68,7 +68,7 @@
     </div>
 
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Late Bills</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="ref">Card subtitle</h6>
@@ -78,7 +78,7 @@
     </div>
 
     <div class="col col-md-4">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Savings</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="avg">Card subtitle</h6>
@@ -88,10 +88,23 @@
     </div>
 
   </div> <!-- End Row -->
+  <div class="row mt-2">
+  
+    <div class="col col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">New Calendar</h5>
+          <h6 class="card-subtitle mb-2 text-muted" id="ref">Not Yet Dynamic</h6>
+          <?php include 'calendar.inc.php' ?>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- End Row -->
 
   <div class="row mt-2">
     <div class="col col-md-9">
-      <div class="card"">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">Total Invoiced</h5>
           <h6 class="card-subtitle mb-2 text-muted">Order Details</h6>

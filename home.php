@@ -12,38 +12,50 @@
 
     <ul class="list-unstyled components nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item">
-        <a href="#dashboard" class="nav-link active" id="dash-tab" data-toggle="tab" role="tab" aria-controls="dashboard" aria-selected="true">
+        <a href="#dashboard" class="nav-link sidebar-link active" id="dash-tab" data-toggle="tab" role="tab" aria-controls="dashboard" aria-selected="true" onclick="document.getElementById('current-page').innerHTML = '';">
           Dashboard
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" id="clients-tab" data-toggle="tab" href="#clients" role="tab" aria-controls="clients" aria-selected="false" onclick="loader()">
+        <a href="#clients" class="nav-link sidebar-link" id="clients-tab" data-toggle="tab" role="tab" aria-controls="clients" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = this.textContent;">
           Clients
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#props" id="props-tab" data-toggle="tab" href="#props" role="tab" aria-controls="props" aria-selected="false" onclick="loader()">
+        <a href="#props" class="nav-link sidebar-link" id="props-tab" data-toggle="tab" role="tab" aria-controls="props" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = this.textContent;">
           Proposals
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a href="#mbp" id="mbp-tab" data-toggle="tab" href="#mbp" role="tab" aria-controls="mbp" aria-selected="false" title="Managed Billing Program">
+        <a href="#mbp" class="nav-link sidebar-link" id="mbp-tab" data-toggle="tab" role="tab" aria-controls="mbp" aria-selected="false" title="Managed Billing Program" onclick="document.getElementById('current-page').innerHTML = this.textContent;">
           MBP
           <i class="fas fa-caret-right float-right"></i>
         </a>
       </li>    
       <li class="nav-item">
-        <a href="#settings" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+        <a href="#settings" id="settings-tab" data-toggle="tab" role="tab" aria-controls="settings" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = this.textContent;">
           Settings
           <i class="fas fa-caret-right float-right"></i>
         </a>
         <ul class="nav" id="sidebar-settings-content">
-          <li class="nav-item"><a href="#">Users</a></li>
-          <li class="nav-item"><a href="#">Roles</a></li>
-          <li class="nav-item"><a href="#">Themes</a></li>
+          <li class="nav-item">
+            <a href="#users" id="users-tab" data-toggle="tab" role="tab" aria-controls="users" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = `Settings / ${this.textContent}`;">
+              Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#roles" id="roles-tab" data-toggle="tab" role="tab" aria-controls="roles" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = `Settings / ${this.textContent}`;">
+              Roles
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#themes" id="themes-tab" data-toggle="tab" role="tab" aria-controls="themes" aria-selected="false" onclick="document.getElementById('current-page').innerHTML = `Settings / ${this.textContent}`;">
+              Themes
+            </a>
+          </li>
         </ul>
       </li>         
     </ul>
@@ -77,22 +89,29 @@
               </form>
 
             </li>
-            <li class="nav-item">
+            <!-- NOTIFICATIONS -->
+            <li class="nav-item dropdown">
+
               <a class="nav-link menu-icon" href="#">
-              <span class="fa-layers fa-fw">
-                <i class="far fa-bell"></i>
-                <span class="fa-layers-counter fa-layers-top-right">2</span>
-              </span>
+                <span class="fa-layers fa-fw">
+                  <i class="far fa-bell"></i>
+                  <span class="fa-layers-counter fa-layers-top-right">2</span>
+                </span>
+              </a>
+
               <span class="sr-only">(current)</span></a>
             </li>
+            <!-- USER -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle menu-icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span id="welcome">Welcome <?php echo $_SESSION['firstName'];?>&nbsp;</span><i class="far fa-user"></i></a>
+              <a class="nav-link dropdown-toggle menu-icon" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><span id="welcome">Hi <?php echo $_SESSION['firstName'];?>&nbsp;</span><i class="far fa-user"></i></a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Something</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Logout</a>
-            </div>
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="#">Something</a>
+                <div class="dropdown-divider"></div>
+                <form action="includes/logout.inc.php" method="POST">
+                  <input type="submit" name="logout-submit" class="dropdown-item" value="Logout">
+                </form>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link menu-icon" href="#"><i class="fas fa-ellipsis-h"></i></a>
@@ -107,13 +126,13 @@
       <div class="container mt-4">
         <!-- Page Title -->
         <div class="page-title">
-          <span class="text-muted">E-commerce Dashboard</span>
+          <span class="text-muted">Dashboard</span>
         </div>
         <!-- Breadcrumb Section -->
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb py-0">
-            <li class="breadcrumb-item">Dashboard</li>
-            <li class="breadcrumb-item active" aria-current="page">E-commerce Dashboard</li>
+            <li class="breadcrumb-item"><a href="home.php">Dashboard</a></li>
+            <li class="breadcrumb-item active" id="current-page" aria-current="page"></li>
           </ol>
         </nav>
       </div>
@@ -137,6 +156,15 @@
         </section>
         <section class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">
         <?php include 'includes/settings.inc.php' ?>
+        </section>
+        <section class="tab-pane" id="users" role="tabpanel" aria-labelledby="users-tab">
+        <?php include 'includes/users.inc.php' ?>
+        </section>
+        <section class="tab-pane" id="roles" role="tabpanel" aria-labelledby="roles-tab">
+        <?php include 'includes/roles.inc.php' ?>
+        </section>
+        <section class="tab-pane" id="themes" role="tabpanel" aria-labelledby="themes-tab">
+        <?php include 'includes/themes.inc.php' ?>
         </section>
       </div>
     </main>

@@ -34,7 +34,7 @@
             $_SESSION['userID'] = $row['ID'];
             $_SESSION['userEmail'] = $row['email'];
             $_SESSION['firstName'] = $row['first_name'];
-            
+            $_SESSION['loggedIn'] = true;
 
             header("Location: ../home.php?login=success");
             exit();

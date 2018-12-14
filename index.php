@@ -8,7 +8,7 @@
         <div class="form-group">
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text"><i class="fas fa-user-alt"></i></span>
+              <span class="input-group-text"><i class="far fa-envelope"></i></span>
             </div>
             <input type="email" name="email" class="form-control input-border" placeholder="Email" aria-label="email" aria-describedby="user-icon" required>
           </div>

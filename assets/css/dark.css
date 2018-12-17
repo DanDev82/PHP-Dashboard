@@ -1,0 +1,505 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #303146;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #fff;
+}
+
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+input:-webkit-autofill,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+  border-color: linear-gradient(rgb(124,132,214), rgb(79,204,210));
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(79,204,210, 0.6);
+  outline: 0 none;
+  background-color: #E6E6E6 !important;
+  -webkit-box-shadow: 0 0 0 100px #E6E6E6 inset;
+  -webkit-transition-property: background-color !important;
+}
+
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+button.edit-button {
+  background: linear-gradient(to left, rgb(124,132,214), rgb(79,204,210));
+  color: #fff;
+  margin-right: 10px;
+}
+
+button.delete-button {
+  background: linear-gradient(to left, rgb(247,103,165), rgb(239,144,116));
+  color: #fff;
+}
+
+/* END GLOBAL */
+
+.tab-content .container {
+  padding-bottom: 40px;
+}
+
+/* #loader-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#page-content {
+  display: none;
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+} */
+
+.fa-layers .fa-layers-counter {
+  font-size: 3rem !important;
+  background: linear-gradient(rgb(247,103,165), rgb(239,144,116)) !important;
+}
+.dropdown-toggle::after {
+  content: none !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: linear-gradient(rgb(124,132,214), rgb(79,204,210)) !important;
+  cursor: pointer;
+}
+
+.navbar {
+  background: #2A2B3F !important;
+}
+
+.nav-item .menu-icon  {
+  font-size: 1.5rem !important;
+}
+
+.navbar form.search-form {
+  margin-top: 9px !important;
+}
+
+/* Toggle class active style on upper nav icons */
+.navbar ul li.active > a, a[aria-expanded="true"] {
+  background: linear-gradient(rgb(124,132,214), rgb(79,204,210)) !important;
+  border-radius: 25px;
+  color: #fff !important;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.4);
+}
+
+
+/* User Icon Label */
+#welcome {
+  font-size: 1rem;
+  margin: 0 8px;
+}
+
+/* Sidebar nav link */
+#dash-tab {
+  transition: 0.3s ease-in-out;
+}
+
+/* Section associated with sidebar nav link */
+#dashboard {
+  animation-delay: 0.3s;
+}
+
+/* Main content wrapper */
+#content {
+  width: 100%;
+}
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #383954;
+  color: #fff;
+  transition: all 0.3s;
+  
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 100vh;
+}
+
+#sidebar .sidebar-header strong {
+  display: none;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #2A2B3F;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #4BCBCA;
+}
+
+#sidebar ul.components li {
+  width: 100%;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+  text-align: left;
+}
+
+#sidebar ul li a:hover {
+  color: #fff;
+  background: #303146;
+  border: none;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+  color: #fff;
+  background: linear-gradient(to left, rgb(124,132,214), rgb(79,204,210)) !important;
+  border: none;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #383954;
+}
+
+/* For home.php */
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.chart {
+  width: 100%;
+  min-height: 300px;
+}
+
+td {
+  font-size: 12px;
+}
+
+th {
+  font-size: 14px;
+}
+
+.modal-body h3,
+.modal-body p {
+  text-align: center;
+}
+
+/* <ul> class style */
+.list-group {
+  width: 80%;
+  margin: auto;
+}
+
+/* <li> class style */
+.list-group-item {
+  font-size: 12px;
+}
+
+#sidebar.active {
+  min-width: 80px;
+  max-width: 80px;
+  font-size: 90%;
+  text-align: center;
+}
+
+.sidebar-link.active {
+  background: -webkit-linear-gradient(rgb(124,132,214), rgb(79,204,210));
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  border: none;
+}
+
+.sidebar-link.active svg.fa-caret-right.active {
+  fill: linear-gradient(rgb(124,132,214), rgb(79,204,210)) !important;
+}
+
+#sidebar.active .svg-inline--fa.fa-w-6 {
+  display: none;
+}
+
+#sidebar .sidebar-header .active {
+  min-width: 80px;
+  max-width: 80px;
+}
+
+#sidebar.active .sidebar-header h3 {
+  display: none;
+}
+
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+
+#sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+#sidebar.active ul li a i {
+  margin-right:  0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+#sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+/* Changing the arrow position to bottom center position, 
+ translateX(50%) works with right: 50% 
+ to accurately  center the arrow */
+#sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+/* <a> with attribute of data-toglle="collapse" */
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* Reusable color class */
+/* .teal {
+  border: 1px solid linear-gradient(rgb(122,130,212), rgb(77,204,205));
+  background: linear-gradient(rgb(122,130,212), rgb(77,204,205));
+  transition: background 0.3s ease-in-out;
+}
+.teal:hover {
+  background: linear-gradient(rgb(247,103,165), rgb(239,144,116)) !important;
+  border: 1px solid linear-gradient(rgb(247,103,165), rgb(239,144,116)) !important;
+  color: #fff;
+} */
+
+/* Found in home.php <main> element */
+.page-title {
+  font-size: 120%;
+  color: #fff;
+}
+
+/* Found mainly on dashboard.php */
+.card {
+  background: rgb(56,57,84);
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.2);
+  min-height: 297px !important;
+}
+
+.card-body {
+  padding: 1.21rem !important;
+}
+
+
+/**************************************************
+                  LOGIN STYLES
+**************************************************/                  
+/* Whole page wrapper for both form pages (login/register) */
+.login-wrapper,
+.register-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: #7386D5;
+}
+
+/* Form Styling */
+.form {
+  background: #fff;
+  padding: 40px 40px 80px;
+  border-top: 3px solid #17A2B8;
+  max-width: 600px;
+  min-width: 350px;
+  border-radius: .25rem;
+  box-shadow: 2px 2px 20px rgba(84, 84, 84, 0.8);
+  position: relative;
+}
+
+/* Move form heading up slightly and give space under heading */
+.form h4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Found in index.php form and home.php form */
+form input.form-control {
+  border-radius: 25px;
+  border: none;
+  background: #E6E6E6 !important;
+}
+
+/* Form Submit and Register button style */
+.form-action-button {
+  background: #17A2B8;
+  color: #fff;
+  padding: 8px 67px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.2);
+  transition: 0.4s ease-in-out;
+}
+
+.form-action-button:hover {
+  background: #148697;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.4);
+}
+
+#sidebarCollapse {
+  background: linear-gradient(to left, rgb(122,130,212), rgb(77,204,205)) !important;
+}
+
+button.search-button {
+  background: linear-gradient(to right, rgb(122,130,212), rgb(77,204,205)) !important;
+  border: 1px solid linear-gradient(to right, rgb(122,130,212), rgb(77,204,205));
+  color: #fff;
+  padding: 5px 15px;
+  margin-right: 10px;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.2);
+  transition: background 0.4s ease-in-out;  
+}
+
+button.search-button:hover {
+  background: linear-gradient(to right, rgb(247,103,165), rgb(239,144,116)) !important;
+  box-shadow: 2px 2px 10px rgba(84, 84, 84, 0.4);
+}
+
+/* Place link at bottom of form and horizontal align link with icon */
+.login-wrapper form a#register-link {
+  position: absolute;
+  bottom: 20px;
+  left: 85px; 
+
+  display: flex;
+  align-items: center;
+}
+
+/*************************************
+      Clean up form input styles
+*************************************/
+/* Remove background color and right border from icon in input group */
+.input-group-text {
+  background: #E6E6E6 !important;
+  border: none;
+  border-radius: 25px;
+  color: #999 ;
+  padding-left: 20px;
+}
+
+/* Removes border for specific inputs */
+.input-border.form-control {
+  border-left: none;
+}
+
+footer#main-footer {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  background: #383954;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: rgb(79,204,210);
+}
+
+footer#main-footer * {
+  color: #fff !important;
+}
+
+footer#main-footer p {
+  line-height: 1.3;
+}

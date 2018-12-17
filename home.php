@@ -69,7 +69,7 @@
               Page Content  
   *******************************-->
   <div id="content">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow  bg-white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-light shadow">
       <div class="container-fluid">
         <button type="button" id="sidebarCollapse" class="btn btn-info">
           <i class="fas fa-align-left"></i>
@@ -85,7 +85,7 @@
               
               <form class="form-inline my-2 my-lg-0 search-form">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-dark my-2 my-sm-0 teal search-button" type="submit">Search</button>
+                <button class="btn btn-outline-dark my-2 my-sm-0 search-button" type="submit">Search</button>
               </form>
 
             </li>
@@ -130,7 +130,7 @@
         </div>
         <!-- Breadcrumb Section -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb py-0">
+          <ol class="breadcrumb py-0" style="background: rgb(56,57,84)">
             <li class="breadcrumb-item"><a href="home.php">Dashboard</a></li>
             <li class="breadcrumb-item active" id="current-page" aria-current="page"></li>
           </ol>

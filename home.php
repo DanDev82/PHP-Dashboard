@@ -190,7 +190,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <div class="row">
+          <div class="row" style="color: #424242;">
             <div class="col col-sm-4">
             <img src="https://via.placeholder.com/150" alt="">
             </div>
@@ -227,7 +227,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <div class="row">
+          <div class="row" style="color: #424242;">
             <div class="col col-sm-4">
             <img src="https://via.placeholder.com/150" alt="">
             </div>
@@ -264,7 +264,7 @@
       </div>
       <div class="modal-body">
         <div class="container">
-          <div class="row">
+          <div class="row" style="color: #424242;">
             <div class="col col-sm-4">
             <img src="https://via.placeholder.com/150" alt="">
             </div>

@@ -6,7 +6,7 @@
         <div class="card-body">
           <h5 class="card-title">Recent Activity</h5>
           <h6 class="card-subtitle mb-2 text-muted" id="rev">Card subtitle</h6>
-          <div id="table_div1"></div>
+          <div id="table_div1" style="color: #424242"></div>
         </div>
       </div>
     </div>
@@ -180,7 +180,7 @@
         <div class="card-body">
           <h5 class="card-title">Recent Orders</h5>
           <h6 class="card-subtitle mb-2 text-muted">Order Details</h6>
-          <div id="table_div"></div>
+          <div id="table_div" style="color: #424242;"></div>
         </div>
       </div>
     </div>
